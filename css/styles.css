@@ -4,40 +4,67 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    background-color: #f5f5dc; /* Retro cream beige color */
 }
 
 /* Header */
 .header {
     background-color: #333;
     color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+    padding: 10px 20px;
+    position: sticky; /* Sticks to the top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header .logo {
-    font-size: 2.5em;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust based on your preferred layout */
+    margin: 0 auto; /* Center the container */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between name and GIF */
+}
+
+.logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2em;
     margin: 0;
 }
 
-.header .header-image {
-    margin-top: 20px; /* Adds space below the name */
-    width: 150px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+.header-image {
+    width: 50px; /* Adjust size of the spinning Mac */
+    height: auto;
 }
 
 /* Navbar */
 .navbar .nav-links {
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 10px 0 0;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 20px; /* Space between links */
+}
+
+.navbar .nav-links li {
+    display: inline;
 }
 
 .navbar .nav-links a {
     text-decoration: none;
     color: #fff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffdd57; /* Highlight effect on hover */
 }
 
 /* Footer */
@@ -45,7 +72,14 @@ body, html {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    margin: 10px auto; /* Add space around the footer */
+    width: calc(100% - 40px); /* Slightly smaller than full width */
+    border-radius: 10px; /* Rounded edges for a floating feel */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the footer */
+    font-family: 'JetBrains Mono', monospace; /* Match font with the header title */
+    font-size: 1em; /* Same size as the title */
+    padding-top: 10px; /* Add space between the content and the top */
+    padding-bottom: 10px; /* Add space between the content and the bottom */
 }
 
 /* Main Content */
@@ -74,4 +108,88 @@ body, html {
 
 .column-right {
     background-color: #ffecb3;
+}
+
+.sub-box {
+    margin-top: 20px; /* Adds space between the original content and the new box */
+    padding: 15px; /* Adds padding inside the box */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Optional border for the box */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.guestbook {
+    margin-top: 40px; /* Spacing from the section above */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Full-page width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.guestbook h2 {
+    margin-bottom: 20px;
+}
+
+#guestbook-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#guestbook-form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#guestbook-form button:hover {
+    background-color: #555;
+}
+
+#guestbook-entries ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#guestbook-entries li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.column, .guestbook, .sub-box {
+    background-color: #fff; /* A clean white for better contrast */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.project p {
+    font-size: 1em;
+}
+
+.icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
 }

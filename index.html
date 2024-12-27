@@ -5,38 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cy Dixon</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <h1 class="logo">Cy Dixon</h1>
-            <img src="static/macspin.gif" alt="Spinning Mac" class="header-image">
-        </nav>
+        <div class="header-container">
+            <div class="logo-section">
+                <h1 class="logo">./Cy Dixon</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#guestbook">Guestbook</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/cy-dixon/" target="_blank">
+                            <img src="static/icons/linkedin.png" alt="LinkedIn" class="icon"> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cylissama" target="_blank">
+                            <img src="static/icons/github.png" alt="GitHub" class="icon"> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:cydaniel@ymail.com">
+                            <img src="static/icons/email.svg" alt="Email" class="icon"> Email
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Main Body -->
     <main class="main-content">
         <div class="columns">
             <div class="column column-left">
-                <h2>Left Column</h2>
-                <p>Content for the left column.</p>
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3><a href="https://cylissama.github.io/Alien-Probe/" target="_blank">Alien P.R.O.B.E - RFID Operational Bridge</a></h3>
+                    <p>
+                        Developed an Android mobile app that interfaces with an Alien RFID scanner and antenna to scan RFID tags and cross-reference them with a connected database.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>Computer Vision and Robotics</h3>
+                    <p>
+                        Worked on algorithms in Linux to detect nearby objects, navigate surroundings, and enable machine-to-machine communication for robotics applications.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>Climate Data Processing</h3>
+                    <p>
+                        Processed and analyzed climate data from various stations across Kentucky using Python and MATLAB, contributing to the Kentucky Mesonet’s climate research initiatives.
+                    </p>
+                </div>
             </div>
             <div class="column column-right">
-                <h2>Right Column</h2>
-                <p>Content for the right column.</p>
+                <h2>About Me</h2>
+                <p>
+                    I am Cy Dixon, a Computer Science student at Western Kentucky University, pursuing a BS in Computer Science with a concentration in System/Scientific Applications (ABET-accredited). My professional focus lies in exploring the intersections of computer science and engineering, particularly in web development, backend services, software engineering, and networking. 
+                </p>
+                <p>
+                    With hands-on experience in computer vision, robotics, and climate data analysis, I have developed robust programming skills in Python, MATLAB, Java, and C. Through my roles at the WKU Center for Energy Systems and the Kentucky Mesonet, I have gained expertise in real-world problem solving and data-driven projects. I am driven by curiosity and a passion for leveraging technology to solve practical problems.
+                </p>
+            </div>
+            <div class="column column-right">
+                <h2>More Information</h2>
+                <p>Content for the second box in the right column.</p>
+            </div>
+        </div>
+        <div class="guestbook">
+            <h2>Guestbook</h2>
+            <form id="guestbook-form">
+                <textarea id="guest-message" placeholder="Leave a message..." rows="4" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="guestbook-entries">
+                <h3>Messages</h3>
+                <ul id="entries-list"></ul>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2024 Cy Dixon. All Rights Reserved.</p>
-        <p>
-            <a href="mailto:your.email@example.com">Email</a> |
-            <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a> |
-            <a href="https://github.com/your-username">GitHub</a>
-        </p>
+        Cy Dixon © 2024
     </footer>
+
+    <!-- Scripts -->
+    <script src="static/js/guestbook.js"></script>
 </body>
 </html>
