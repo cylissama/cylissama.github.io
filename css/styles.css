@@ -1,195 +1,238 @@
-/* General Reset */
-body, html {
+/* ------------------------------
+   GLOBAL / RESET
+--------------------------------*/
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     box-sizing: border-box;
-    background-color: #f5f5dc; /* Retro cream beige color */
-}
-
-/* Header */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    position: sticky; /* Sticks to the top on scroll */
-    top: 0;
-    z-index: 1000; /* Ensure it's above other elements */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'JetBrains Mono', monospace, sans-serif;
+    background: #f3f3f3;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ------------------------------
+     HEADER / NAVBAR
+  --------------------------------*/
+  .header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+  
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust based on your preferred layout */
-    margin: 0 auto; /* Center the container */
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between name and GIF */
-}
-
-.logo {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 2em;
-    margin: 0;
-}
-
-.header-image {
-    width: 50px; /* Adjust size of the spinning Mac */
-    height: auto;
-}
-
-/* Navbar */
-.navbar .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px; /* Space between links */
-}
-
-.navbar .nav-links li {
-    display: inline;
-}
-
-.navbar .nav-links a {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .logo-section .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
     text-decoration: none;
-    color: #fff;
-    font-size: 1em;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover {
-    color: #ffdd57; /* Highlight effect on hover */
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    margin: 10px auto; /* Add space around the footer */
-    width: calc(100% - 40px); /* Slightly smaller than full width */
-    border-radius: 10px; /* Rounded edges for a floating feel */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the footer */
-    font-family: 'JetBrains Mono', monospace; /* Match font with the header title */
-    font-size: 1em; /* Same size as the title */
-    padding-top: 10px; /* Add space between the content and the top */
-    padding-bottom: 10px; /* Add space between the content and the bottom */
-}
-
-/* Main Content */
-.main-content {
-    padding: 20px;
-}
-
-.columns {
+  }
+  
+  .navbar .nav-links {
+    list-style-type: none;
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    /* Ensure the flex container spans the width */
-    width: 100%;
-}
-
-.column {
-    flex: 1; /* Ensures both columns have equal width */
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #f4f4f4;
-}
-
-.column-left {
-    background-color: #e0f7fa;
-}
-
-.column-right {
-    background-color: #ffecb3;
-}
-
-.sub-box {
-    margin-top: 20px; /* Adds space between the original content and the new box */
-    padding: 15px; /* Adds padding inside the box */
-    background-color: #f9f9f9; /* Light background color */
-    border: 1px solid #ddd; /* Optional border for the box */
-    border-radius: 5px; /* Rounded corners */
-}
-
-.guestbook {
-    margin-top: 40px; /* Spacing from the section above */
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%; /* Full-page width */
-    box-sizing: border-box; /* Include padding in width */
-}
-
-.guestbook h2 {
-    margin-bottom: 20px;
-}
-
-#guestbook-form textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 16px;
+    gap: 1rem;
+  }
+  
+  .navbar .nav-links li {
+    display: inline-block;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #3498db;
+  }
+  
+  .navbar .nav-links .active {
+    font-weight: 700;
+    color: #3498db;
+  }
+  
+  /* Icons in nav */
+  .icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+  }
+  
+  /* ------------------------------
+     MAIN CONTENT
+  --------------------------------*/
+  .main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* 
+    TWO-COLUMN LAYOUT FOR INDEX PAGE 
+    We only apply these styles inside .main-content if we’re on the index
+    or use it as a general container for all pages if you prefer.
+  */
+  
+  .index-content-container {
+    display: flex;
+    flex-wrap: wrap; /* ensure columns wrap on narrow screens */
+    gap: 2rem;       /* spacing between columns */
+  }
+  
+  /* Left Column */
+  .left-column {
+    flex: 1;         /* or use a specific width, e.g., flex: 0 0 50%; */
+    min-width: 300px;  
+  }
+  
+  /* Right Column */
+  .right-column {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* ------------------------------
+     FOOTER
+  --------------------------------*/
+  .footer {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* ------------------------------
+     GRADE CALCULATOR STYLES
+  --------------------------------*/
+  .calc-container {
+    margin: 1.5rem 0;
+    padding: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#guestbook-form button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #333;
+    background: #fafafa;
+  }
+  
+  /* Header row styling */
+  .calc-header {
+    font-weight: bold;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Each row is flex-based to simulate a table */
+  .calc-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+  }
+  
+  /* Each cell in the row */
+  .calc-cell {
+    flex: 1;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Make sure header row has some extra spacing */
+  .calc-header .calc-cell {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Assignment row inputs */
+  .assignment-row input[type="text"],
+  .assignment-row input[type="number"] {
+    width: 100%;
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  /* Remove row button */
+  .remove-row {
+    background: #e74c3c;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
     cursor: pointer;
-}
-
-#guestbook-form button:hover {
-    background-color: #555;
-}
-
-#guestbook-entries ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#guestbook-entries li {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #e9ecef;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.column, .guestbook, .sub-box {
-    background-color: #fff; /* A clean white for better contrast */
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
-.project h3 {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.project p {
-    font-size: 1em;
-}
-
-.icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px;
-    margin-right: 8px; /* Space between icon and text */
-    vertical-align: middle; /* Align icon with text */
-}
+    font-size: 1rem;
+    border-radius: 3px;
+  }
+  
+  .remove-row:hover {
+    background: #c0392b;
+  }
+  
+  /* Add Row & Calculate buttons */
+  #add-row,
+  .calculate-btn {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  /* +Add Row button style */
+  #add-row {
+    background: #2ecc71;
+    color: #fff;
+  }
+  
+  #add-row:hover {
+    background: #27ae60;
+  }
+  
+  /* Calculate button style */
+  .calculate-btn {
+    background: #3498db;
+    color: #fff;
+  }
+  
+  .calculate-btn:hover {
+    background: #2980b9;
+  }
+  
+  /* ------------------------------
+     CALCULATOR RESULT BOX
+  --------------------------------*/
+  .grade-result {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #eef9ee;
+    border: 1px solid #c9e3ca;
+    border-radius: 4px;
+  }
+  
+  .grade-result h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
