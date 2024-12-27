@@ -1,0 +1,77 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header .header-image {
+    margin-top: 20px; /* Adds space below the name */
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar */
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    /* Ensure the flex container spans the width */
+    width: 100%;
+}
+
+.column {
+    flex: 1; /* Ensures both columns have equal width */
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.column-left {
+    background-color: #e0f7fa;
+}
+
+.column-right {
+    background-color: #ffecb3;
+}
