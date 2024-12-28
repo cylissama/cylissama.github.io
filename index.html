@@ -1,49 +1,107 @@
-Hello World
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CV/Resume</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="description" content="Personal website of Cy Dixon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cy Dixon - Home</title>
+  <!-- Link to your existing CSS file -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <h1 class="logo">Your Name</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-section">
+        <h1 class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                ./Cy Dixon
+            </a>
+        </h1>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <!-- Example nav links; no Grade Calculator here -->
+           <li> Contact Me </li>
+          <li> -> </li>
+          <li>
+            <a href="https://www.linkedin.com/in/cy-dixon/" target="_blank">
+              <img src="static/icons/linkedin.png" alt="LinkedIn" class="icon" /> 
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/cylissama" target="_blank">
+              <img src="static/icons/github.png" alt="GitHub" class="icon" /> 
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="mailto:cydaniel@ymail.com">
+              <img src="static/icons/email.svg" alt="Email" class="icon" /> 
+              Email
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Main Body -->
-    <main class="main-content">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Your brief introduction goes here.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/your-repo">Project 1</a></li>
-                <li><a href="https://github.com/your-repo">Project 2</a></li>
-                <li><a href="https://github.com/your-repo">Project 3</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2024 Your Name. All Rights Reserved.</p>
+  <!-- Main Content: Two Columns -->
+  <main class="main-content">
+    <div class="index-content-container">
+      <section class="left-column">
+        <h2 id="about-me">About Me</h2>
         <p>
-            <a href="mailto:your.email@example.com">Email</a> |
-            <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a> |
-            <a href="https://github.com/your-username">GitHub</a>
+          Hello, I’m Cy. I’m a developer.
+          Feel free to explore my projects and contact me.
         </p>
-    </footer>
+        <br>
+        <h2 id="skills">Technologies & Skills</h2>
+        <p>Proficiency with the following tools is to be expected</p>
+        <br>
+        <ul>
+          <li>Python</li>
+          <li>C/C++</li>
+          <li>Java</li>
+          <li>HTML</li>
+          <li>Android Studio (Kotlin/Java) </li>
+          <li>React (Front-End Development)</li>
+          <li>Node.js (Back-End Development)</li>
+          <li>Git &amp; GitHub (Version Control)</li>
+          <li>SQL (MySQL, SQLite)</li>
+        </ul>
+    </section>
+
+      <!-- RIGHT COLUMN (Projects Only) -->
+      <section class="right-column">
+        <div class="projects-box">
+          <h3>My Projects</h3>
+          <ul>
+            <li>
+              <a href="https://cylissama.github.io/Alien-Probe/" target="_blank">
+                Alien P.R.O.B.E – RFID Operational Bridge
+              </a>
+            </li>
+            <li>
+              <a href="grade_calculator.html" target="_blank">
+                Grade Calculator
+              </a>
+            </li>
+            <!-- Add more links or remove any placeholders as needed -->
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Cy Dixon © 2024
+  </footer>
 </body>
 </html>

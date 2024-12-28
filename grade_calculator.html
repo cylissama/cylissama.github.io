@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Grade Calculator - Cy Dixon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade Calculator - Cy Dixon</title>
+  <!-- Link to the same CSS as index.html -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-section">
+        <h1 class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                ./Cy Dixon
+            </a>
+        </h1>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <!-- Example nav links; no Grade Calculator here -->
+           <li> Contact Me </li>
+          <li> -> </li>
+          <li>
+            <a href="https://www.linkedin.com/in/cy-dixon/" target="_blank">
+              <img src="static/icons/linkedin.png" alt="LinkedIn" class="icon" /> 
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/cylissama" target="_blank">
+              <img src="static/icons/github.png" alt="GitHub" class="icon" /> 
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="mailto:cydaniel@ymail.com">
+              <img src="static/icons/email.svg" alt="Email" class="icon" /> 
+              Email
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2>Grade Calculator</h2>
+    <p>
+      Enter the points you’ve earned and the total points possible for each 
+      assignment. You can add or remove rows as needed. Press 
+      <strong>Calculate</strong> to see your final percentage and letter grade.
+    </p>
+
+    <!-- Grade Calculator Container -->
+    <section class="calc-container">
+      <!-- Header Row (mimics a table) -->
+      <div class="calc-row calc-header">
+        <div class="calc-cell">Assignment Name</div>
+        <div class="calc-cell">Earned</div>
+        <div class="calc-cell">Possible</div>
+        <div class="calc-cell">Remove</div>
+      </div>
+
+      <!-- Form for dynamic rows -->
+      <form id="grade-form">
+        <div id="calc-rows">
+          <!-- Example row 1 -->
+          <div class="calc-row assignment-row">
+            <div class="calc-cell">
+              <input
+                type="text"
+                class="assignment-name"
+                name="assignmentName"
+                placeholder="Assignment 1"
+              />
+            </div>
+            <div class="calc-cell">
+              <input
+                type="number"
+                class="assignment-earned"
+                name="assignmentEarned"
+                placeholder="Earned"
+                required
+              />
+            </div>
+            <div class="calc-cell">
+              <input
+                type="number"
+                class="assignment-possible"
+                name="assignmentPossible"
+                placeholder="Possible"
+                required
+              />
+            </div>
+            <div class="calc-cell">
+              <button type="button" class="remove-row">X</button>
+            </div>
+          </div>
+          <!-- Example row 2 -->
+          <div class="calc-row assignment-row">
+            <div class="calc-cell">
+              <input
+                type="text"
+                class="assignment-name"
+                name="assignmentName"
+                placeholder="Assignment 2"
+              />
+            </div>
+            <div class="calc-cell">
+              <input
+                type="number"
+                class="assignment-earned"
+                name="assignmentEarned"
+                placeholder="Earned"
+                required
+              />
+            </div>
+            <div class="calc-cell">
+              <input
+                type="number"
+                class="assignment-possible"
+                name="assignmentPossible"
+                placeholder="Possible"
+                required
+              />
+            </div>
+            <div class="calc-cell">
+              <button type="button" class="remove-row">X</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Row / Calculate buttons -->
+        <button type="button" id="add-row">+ Add Row</button>
+        <button type="submit" class="calculate-btn">Calculate</button>
+      </form>
+    </section>
+
+    <!-- Grade Result Display -->
+    <div id="grade-result" class="grade-result"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Cy Dixon © 2024
+  </footer>
+
+  <!-- External (or inline) JS for adding/removing rows + calculating -->
+  <script src="static/js/grade_calculator.js"></script>
+</body>
+</html>
