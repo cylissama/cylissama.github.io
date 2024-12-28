@@ -25,6 +25,9 @@
     background-color: #fff;
     border-bottom: 1px solid #ccc;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* ensures the header stays on top of other elements */
   }
   
   .header-container {
@@ -83,9 +86,10 @@
   .main-content {
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 2rem;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
   }
   
   /* 
@@ -268,3 +272,5 @@
   .projects-box a:hover {
     text-decoration: underline;
   }
+
+  
