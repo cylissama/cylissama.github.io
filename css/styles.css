@@ -236,3 +236,35 @@
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
+
+  /* Projects box styling */
+.projects-box {
+    margin-top: 1.5rem;        /* space above the box */
+    padding: 1rem;            /* padding inside the box */
+    border: 1px solid #ccc;   /* light gray border */
+    background-color: #fafafa;
+    border-radius: 4px;       /* rounded corners (optional) */
+  }
+  
+  .projects-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects-box ul {
+    list-style-type: disc;    /* or none, if you prefer */
+    padding-left: 1.5rem;
+  }
+  
+  .projects-box ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects-box a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .projects-box a:hover {
+    text-decoration: underline;
+  }
