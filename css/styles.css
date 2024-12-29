@@ -17,7 +17,7 @@
     color: #333;
     line-height: 1.6;
   }
-  
+
   /* ------------------------------
      HEADER / NAVBAR
   --------------------------------*/
@@ -84,12 +84,12 @@
      MAIN CONTENT
   --------------------------------*/
   .main-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 2rem auto;
     padding: 2rem;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 4px;
+    border-radius: 20px;
   }
   
   /* 
@@ -102,6 +102,7 @@
     display: flex;
     flex-wrap: wrap; /* ensure columns wrap on narrow screens */
     gap: 2rem;       /* spacing between columns */
+
   }
   
   /* Left Column */
@@ -273,4 +274,57 @@
     text-decoration: underline;
   }
 
-  
+
+// recipes page
+
+/* Custom background color scheme for recipes.html */
+.recipes-page {
+  background-color: rgb(198, 161, 111);
+}
+
+.recipes-page .header, 
+.recipes-page .footer {
+  background-color: rgb(198, 161, 111); /* Slightly lighter brown */
+}
+
+.recipes-page .main-content {
+  background-color: rgb(198, 161, 111); /* Even lighter brown */
+  border: 1px solid rgb(198, 161, 111); /* Darker brown */
+}
+
+.recipes-page .content-container {
+  display: flex;
+}
+
+.recipes-page .left-section {
+  flex: 3; /* 75% width */
+  padding: 10px;
+  //background-color: rgb(161, 127, 93); /* Lightest brown */
+  //border: 1px solid rgb(61, 27, 3); /* Darker brown */
+} 
+
+.recipes-page .right-section {
+  flex: 1; /* 25% width */
+  padding: 10px;
+  //background-color: rgb(181, 147, 113); /* Medium brown */
+  //border: 1px solid rgb(41, 7, 0); /* Darkest brown */
+}
+
+/* Recipe box styling */
+.recipe-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 5px 0;
+}
+
+.recipe-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.recipe-description {
+  font-size: 1rem;
+  color: #333;
+}
