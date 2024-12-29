@@ -85,7 +85,7 @@
   --------------------------------*/
   .main-content {
     max-width: 1400px;
-    margin: 2rem auto;
+    margin: 1rem;
     padding: 2rem;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -102,13 +102,31 @@
     display: flex;
     flex-wrap: wrap; /* ensure columns wrap on narrow screens */
     gap: 2rem;       /* spacing between columns */
-
+    padding: 0.5rem;
   }
   
   /* Left Column */
   .left-column {
     flex: 1;         /* or use a specific width, e.g., flex: 0 0 50%; */
     min-width: 300px;  
+  }
+
+  /* Indent nested lists */
+  .left-column ul ul {
+    margin-left: 20px; /* Adjust the value as needed */
+    list-style-type: disc; /* Optional: change bullet style */
+  }
+
+  /* Remove bullets and style list items as h3 */
+  ul.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  ul.no-bullets li {
+    font-weight: 600; /* Semibold */
+    font-size: 1.25rem; /* Adjust size as needed */
+    margin-bottom: 0.5rem;
   }
   
   /* Right Column */
