@@ -335,6 +335,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 5px 0;
+  text-align: center; /* Center-align content */
 }
 
 .recipe-title {
@@ -345,4 +346,11 @@
 .recipe-description {
   font-size: 1rem;
   color: #333;
+}
+
+.recipe-photo {
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
