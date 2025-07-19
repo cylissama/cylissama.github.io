@@ -84,8 +84,8 @@
      MAIN CONTENT
   --------------------------------*/
   .main-content {
-    max-width: 1400px;
-    margin: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
     padding: 2rem;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -94,26 +94,43 @@
   
   /* 
     TWO-COLUMN LAYOUT FOR INDEX PAGE 
-    We only apply these styles inside .main-content if we’re on the index
-    or use it as a general container for all pages if you prefer.
+    Using CSS Grid for perfect symmetry
   */
   
   .index-content-container {
-    display: flex;
-    flex-wrap: wrap; /* ensure columns wrap on narrow screens */
-    gap: 2rem;       /* spacing between columns */
-    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
   }
   
   /* Left Column */
   .left-column {
-    flex: 1;         /* or use a specific width, e.g., flex: 0 0 50%; */
-    min-width: 300px;  
+    min-width: 0; /* Prevents overflow in grid */
+  }
+
+  .left-column h2 {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .left-column h2:first-child {
+    margin-top: 0;
+  }
+
+  .left-column p {
+    margin-bottom: 1rem;
+  }
+
+  .left-column ul {
+    margin-bottom: 1rem;
   }
 
   /* Indent nested lists */
   .left-column ul ul {
     margin-left: 20px; /* Adjust the value as needed */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     list-style-type: disc; /* Optional: change bullet style */
   }
 
@@ -131,8 +148,80 @@
   
   /* Right Column */
   .right-column {
-    flex: 1;
-    min-width: 300px;
+    min-width: 0; /* Prevents overflow in grid */
+  }
+
+  /* Projects box styling */
+  .projects-box {
+    margin-bottom: 1.5rem;        /* space below each box */
+    padding: 1rem;               /* padding inside the box */
+    border: 1px solid #ccc;      /* light gray border */
+    background-color: #fafafa;
+    border-radius: 4px;          /* rounded corners */
+  }
+
+  .projects-box:last-child {
+    margin-bottom: 0;            /* Remove margin from last box */
+  }
+  
+  .projects-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects-box ul {
+    list-style-type: disc;    /* or none, if you prefer */
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .projects-box ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .projects-box ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .projects-box a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .projects-box a:hover {
+    text-decoration: underline;
+  }
+
+  .projects-box p {
+    margin-bottom: 0.5rem;
+  }
+
+  .projects-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* ------------------------------
+     RESPONSIVE DESIGN
+  --------------------------------*/
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .navbar .nav-links {
+      justify-content: center;
+    }
+
+    .main-content {
+      margin: 1rem;
+      padding: 1rem;
+    }
+
+    .index-content-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
   }
   
   /* ------------------------------
@@ -260,97 +349,62 @@
     margin-bottom: 0.5rem;
   }
 
-  /* Projects box styling */
-.projects-box {
-    margin-top: 1.5rem;        /* space above the box */
-    padding: 1rem;            /* padding inside the box */
-    border: 1px solid #ccc;   /* light gray border */
-    background-color: #fafafa;
-    border-radius: 4px;       /* rounded corners (optional) */
-  }
+  /* ------------------------------
+     RECIPES PAGE STYLES
+  --------------------------------*/
   
-  .projects-box h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-  .projects-box ul {
-    list-style-type: disc;    /* or none, if you prefer */
-    padding-left: 1.5rem;
-  }
-  
-  .projects-box ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .projects-box a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
-  .projects-box a:hover {
-    text-decoration: underline;
+  /* Custom background color scheme for recipes.html */
+  .recipes-page {
+    background-color: rgb(198, 161, 111);
   }
 
+  .recipes-page .header, 
+  .recipes-page .footer {
+    background-color: rgb(198, 161, 111); /* Slightly lighter brown */
+  }
 
-// recipes page
+  .recipes-page .main-content {
+    background-color: rgb(198, 161, 111); /* Even lighter brown */
+    border: 1px solid rgb(198, 161, 111); /* Darker brown */
+  }
 
-/* Custom background color scheme for recipes.html */
-.recipes-page {
-  background-color: rgb(198, 161, 111);
-}
+  .recipes-page .content-container {
+    display: flex;
+  }
 
-.recipes-page .header, 
-.recipes-page .footer {
-  background-color: rgb(198, 161, 111); /* Slightly lighter brown */
-}
+  .recipes-page .left-section {
+    flex: 3; /* 75% width */
+    padding: 10px;
+  } 
 
-.recipes-page .main-content {
-  background-color: rgb(198, 161, 111); /* Even lighter brown */
-  border: 1px solid rgb(198, 161, 111); /* Darker brown */
-}
+  .recipes-page .right-section {
+    flex: 1; /* 25% width */
+    padding: 10px;
+  }
 
-.recipes-page .content-container {
-  display: flex;
-}
+  /* Recipe box styling */
+  .recipe-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 5px 0;
+    text-align: center; /* Center-align content */
+  }
 
-.recipes-page .left-section {
-  flex: 3; /* 75% width */
-  padding: 10px;
-  //background-color: rgb(161, 127, 93); /* Lightest brown */
-  //border: 1px solid rgb(61, 27, 3); /* Darker brown */
-} 
+  .recipe-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 
-.recipes-page .right-section {
-  flex: 1; /* 25% width */
-  padding: 10px;
-  //background-color: rgb(181, 147, 113); /* Medium brown */
-  //border: 1px solid rgb(41, 7, 0); /* Darkest brown */
-}
+  .recipe-description {
+    font-size: 1rem;
+    color: #333;
+  }
 
-/* Recipe box styling */
-.recipe-box {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 5px 0;
-  text-align: center; /* Center-align content */
-}
-
-.recipe-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.recipe-description {
-  font-size: 1rem;
-  color: #333;
-}
-
-.recipe-photo {
-  width: 75%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+  .recipe-photo {
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
